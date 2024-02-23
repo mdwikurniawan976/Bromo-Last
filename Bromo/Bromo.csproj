@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FA1F76F-710F-4E22-AE51-F5D8E5F474B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bromo</RootNamespace>
+    <AssemblyName>Bromo</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers\BeliTiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\BeliTiket.Designer.cs">
+      <DependentUpon>BeliTiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\DetailPenumpang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\DetailPenumpang.Designer.cs">
+      <DependentUpon>DetailPenumpang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\ListPenerbangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\ListPenerbangan.Designer.cs">
+      <DependentUpon>ListPenerbangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\TiketSaya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\TiketSaya.Designer.cs">
+      <DependentUpon>TiketSaya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Alert.cs" />
+    <Compile Include="Masters\AdminMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\AdminMainFrm.Designer.cs">
+      <DependentUpon>AdminMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerFrm.Designer.cs">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DaftarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\DaftarFrm.Designer.cs">
+      <DependentUpon>DaftarFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Akun.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bandara.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JadwalPenerbangan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KodePromo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maskapai.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterBandaraFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterBandaraFrm.Designer.cs">
+      <DependentUpon>MasterBandaraFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterJadwalPenerbangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterJadwalPenerbangan.Designer.cs">
+      <DependentUpon>MasterJadwalPenerbangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterKodePromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterKodePromo.Designer.cs">
+      <DependentUpon>MasterKodePromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterMaskapaiFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterMaskapaiFrm.Designer.cs">
+      <DependentUpon>MasterMaskapaiFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\tes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\tes.Designer.cs">
+      <DependentUpon>tes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\UbahStatusPenerbangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\UbahStatusPenerbangan.Designer.cs">
+      <DependentUpon>UbahStatusPenerbangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Negara.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PerubahanStatusJadwalPenerbangan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusPenerbangan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaksiDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransaksiHeader.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customers\BeliTiket.resx">
+      <DependentUpon>BeliTiket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerFrm.resx">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\DetailPenumpang.resx">
+      <DependentUpon>DetailPenumpang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\ListPenerbangan.resx">
+      <DependentUpon>ListPenerbangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\TiketSaya.resx">
+      <DependentUpon>TiketSaya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\DaftarFrm.resx">
+      <DependentUpon>DaftarFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\AdminMainFrm.resx">
+      <DependentUpon>AdminMainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\MasterBandaraFrm.resx">
+      <DependentUpon>MasterBandaraFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\MasterJadwalPenerbangan.resx">
+      <DependentUpon>MasterJadwalPenerbangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\MasterKodePromo.resx">
+      <DependentUpon>MasterKodePromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\MasterMaskapaiFrm.resx">
+      <DependentUpon>MasterMaskapaiFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\tes.resx">
+      <DependentUpon>tes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\UbahStatusPenerbangan.resx">
+      <DependentUpon>UbahStatusPenerbangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Akun.datasource" />
+    <None Include="Bandara.datasource" />
+    <None Include="JadwalPenerbangan.datasource" />
+    <None Include="KodePromo.datasource" />
+    <None Include="Maskapai.datasource" />
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Negara.datasource" />
+    <None Include="packages.config" />
+    <None Include="PerubahanStatusJadwalPenerbangan.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StatusPenerbangan.datasource" />
+    <None Include="TransaksiDetail.datasource" />
+    <None Include="TransaksiHeader.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out-unselected-72.png" />
+    <None Include="Resources\notepad-unselected-72.png" />
+    <None Include="Resources\purchase-tag-alt-unselected-72.png" />
+    <None Include="Resources\calendar-unselected-72.png" />
+    <None Include="Resources\plane-take-off-unselected-72.png" />
+    <None Include="Resources\map-unselected-72.png" />
+    <None Include="Resources\menu-alt-72.png" />
+    <None Include="Resources\Logo Rect - Without Tagline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\notepad-selected-72.png" />
+    <None Include="Resources\purchase-tag-alt-selected-72.png" />
+    <None Include="Resources\calendar-selected-721.png" />
+    <None Include="Resources\plane-take-off-selected-72.png" />
+    <None Include="Resources\map-selected-72.png" />
+    <None Include="Resources\group-regular-72.png" />
+    <None Include="Resources\time-five-regular-72.png" />
+    <None Include="Resources\calendar-unselected-721.png" />
+    <None Include="Resources\circle-solid-72.png" />
+    <None Include="Resources\right-arrow-regular-72.png" />
+    <None Include="Resources\chevron-left-solid-72.png" />
+    <None Include="Resources\mountain.png" />
+    <None Include="Resources\group-solid-72.png" />
+    <None Include="Resources\calendar-selected-72.png" />
+    <None Include="Resources\plane-land-solid-72.png" />
+    <None Include="Resources\plane-take-off-solid-72.png" />
+    <None Include="Resources\log-out-alt-72.png" />
+    <None Include="Resources\airplane-ticket.png" />
+    <None Include="Resources\Logo Alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
